@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Log in</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	
+</head>
+<body>
+	<div class="karkas">
+	
+		<div class="header">
+			<a href="#"><img class="logo" src="images/logo.svg" /></a>
+		</div>
+		
+		<div class="main">
+			<ul class="menu">
+				<li id="login"><p>Вход</p></li>
+				<li id="reg"><p>Регистрация</p></li>
+			</ul>
+			<form class="form_login" id="login_content" action="#" method="GET">
+				<ul>
+					<li><input type="email" placeholder="Email" name="email" id="email"></li>
+					<li><input type="password" placeholder="Пароль" name="psw" id="psw" autocomplete="off"></li>
+					<li><input class="form_button" type="submit" name="send" value="Войти"></li>
+				</ul>
+			</form>
+			<form class="form_reg" id="reg_content" action="#" method="GET">
+				<ul>
+					<li>Имя: <br><input class="form_input" type="text" name="name" required="required"><br></li>
+					<li>Фамилия: <br><input class="form_input" type="text" name="name" required="required"><br></li>
+					<li>Отчество: <br><input class="form_input" type="text" name="name" required="required"><br></li>
+					<li>Серия паспорта: <br><input class="form_input" type="text" name="name" required="required" placeholder="XXXX"><br></li>
+					<li>Номер паспорта: <br><input class="form_input" type="text" name="name" required="required" placeholder="XXXXXX"><br></li>
+					<li>
+						Выберете ваш пол:<br>
+						<input class="radio" type="radio" name="gender">Мужской<br>
+						<input class="radio" type="radio" name="gender">Женский<br>
+					</li>
+					<li>Email: <br><input class="form_input" type="email" name="email" required="required"><br></li>
+					<li>Пароль: <br><input class="form_input" type="password" name="psw" required="required" placeholder="Придумайте пароль"><br></li>
+					<li><input class="form_button" type="submit" name="send" value="Зарегистрироваться"></li>
+				</ul>
+			</form>
+		</div>	
+		
+		<div class="footer">
+			<p>Homework Synergy © 2022</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
