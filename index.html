@@ -1,0 +1,188 @@
+<?php
+$ROOT = $_SERVER['DOCUMENT_ROOT'] . '/';
+$BASE_HREF = '//' . $_SERVER['HTTP_HOST'] . (!empty($_SERVER['DOCUMENT_URI']) ? str_replace( substr(str_replace('index.php', '', $_SERVER['DOCUMENT_URI']), 1), '', $_SERVER['REQUEST_URI'] ) : '');
+$URL = '//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$version = isset($_GET['version']) ? urldecode( strtolower($_GET['version']) ) : '';
+$partner = isset($_GET['partner']) ? urldecode( strtolower($_GET['partner']) ) : '';
+
+include_once $ROOT . 'version.php';
+
+
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <base href="<?=$BASE_HREF?>">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-<?=$GTMID?>');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="<?=$desc;?>">
+  <meta name="application-name" content="<?=$title;?>">
+  
+  <title><?=$title;?></title>
+
+  <meta property="og:title" content="<?=$title;?>">
+  <meta property="og:description" content="<?=$desc;?>">
+  <meta property="og:url" content="//<?=$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
+  <meta property="og:type" content="article">
+
+  <!-- Сброс стилей -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/reseter.css" onload="this.rel ='stylesheet'; this.onload=null">
+
+  <link href="css/fonts.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="">
+  <div class="wrapper">
+    
+  <header class="header">
+    <div class="container header__container">
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__item-link">Барное меню</a></li>
+                <li class="nav__item"><a href="#" class="nav__item-link">Меню Алкошок</a></li>
+            </ul>
+        </nav>
+        <div class="header__logo">
+            <a href="#" class="header__logo-link"><img src="img/header/logo.svg" alt="" class="header__logo-img"></a>
+        </div>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__item-link">Контакты</a></li>
+                <li class="nav__item"><a href="#" class="nav__item-link">California diner</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  <main class="main">
+    <div class="container main-container">
+        <div class="main__headline neon-text">California <span class="break"></span> bar</div>
+        <div class="main__slogan">
+            Лучший <span class="main__slogan_pinc-text break">концертный бар</span> на Арбате
+        </div>
+    </div>
+</main>
+  <div class="events">
+    <div class="container events-container">
+        <div class="events-headline headline-block neon-text">ближайшие мероприятия</div>
+        <div class="events-blocks">
+            <div class="events-blocks__item event">
+                <div class="event__img _1"></div>
+                <div class="event__headline">Мотологические вечера</div>
+                <div class="event__date">29.04.20</div>
+                <div class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            </div>
+            <div class="events-blocks__item event">
+                <div class="event__img _2"></div>
+                <div class="event__headline">ТАЙМ-АУТ</div>
+                <div class="event__date">29.04.20</div>
+                <div class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            </div>
+            <div class="events-blocks__item event">
+                <div class="event__img _1"></div>
+                <div class="event__headline">Мотологические вечера</div>
+                <div class="event__date">29.04.20</div>
+                <div class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="bar">
+    <div class="container bar-container">
+        <div class="bar-headline headline-block neon-text">Новинки бара</div>
+        <div class="bar-content">
+            <img src="img/bar/coctail.png" alt="" class="bar-content__img">
+            <div class="bar-content__star"></div>
+            <div class="bar-content__item drinks">
+                <div class="drinks__item drink">
+                    <div class="drink__container">
+                        <div class="drink__name">Джин-тоник</div>
+                        <div class="drink__line"></div>
+                        <div class="drink__price">360 ₽</div>
+                    </div>
+                    <div class="drink__composition">Джин, тоник, лимон, лёд. 250 мл.</div>
+                </div>
+                <div class="drinks__item drink">
+                    <div class="drink__container">
+                        <div class="drink__name">Отвертка</div>
+                        <div class="drink__line"></div>
+                        <div class="drink__price">340 ₽</div>
+                    </div>
+                    <div class="drink__composition">Водка, апельсиновый сок, апельсин, лёд. 250 мл.</div>
+                </div>
+                <div class="drinks__item drink">
+                    <div class="drink__container">
+                        <div class="drink__name">Джим бим эппл тоник</div>
+                        <div class="drink__line"></div>
+                        <div class="drink__price">360 ₽</div>
+                    </div>
+                    <div class="drink__composition">Джим бим эпл, тоник, яблоко, лёд. 250 мл.</div>
+                </div>
+                <div class="drinks__item drink">
+                    <div class="drink__container">
+                        <div class="drink__name">Раша тудей</div>
+                        <div class="drink__line"></div>
+                        <div class="drink__price">350 ₽</div>
+                    </div>
+                    <div class="drink__composition">Финляндия Водка, ликёр дыня, ликер банан, яблочный сок, коктейльная вишня, лёд. 250мл.</div>
+                </div>
+            </div>
+        </div>
+        <button class="bar-button">Посмотреть барное меню целиком</button>
+        <a href="#" class="bar-link">Меню АЛКОШОК</a>
+    </div>
+</div>
+  <div class="disco">
+    <div class="container disco-container">
+        <div class="disco__item-pink">Дискотека</div>
+        <div class="disco__item-white">Каждую пятницу и субботу</div>
+    </div>
+</div>
+  <div class="gallery">
+    <div class="container gallery-container">
+        <div class="gallery-headline headline-block neon-text">ГАЛЕРЕЯ</div>
+        <div class="gallery-img">
+            <img src="img/gallery/1.png" alt="" class="gallery-img__item">
+            <img src="img/gallery/2.png" alt="" class="gallery-img__item">
+            <img src="img/gallery/3.png" alt="" class="gallery-img__item">
+            <img src="img/gallery/4.png" alt="" class="gallery-img__item">
+            <img src="img/gallery/5.png" alt="" class="gallery-img__item">
+            <img src="img/gallery/6.png" alt="" class="gallery-img__item">
+        </div>
+    </div>
+</div>
+  <footer class="footer">
+    <div class="container footer-container">
+       <div class="footer__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.455796183673!2d37.59313931608864!3d55.75058399963041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a4cd680b9f5%3A0xf8114b3527cc894b!2sCalifornia%20Diner!5e0!3m2!1sru!2sru!4v1662030997291!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer__headline">California Bar</div>
+        <div class="footer__contacts contacts">
+            <div class="contacts__adres">ул. Арбат, 23, стр. 1</div>
+            <div class="contacts__phone">+ 7(499) 579-80-04</div>
+            <div class="contacts__time">Работаем круглосуточно</div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__media media">
+            <a href="#" class="media__link media__link_vk"></a>
+            <a href="#" class="media__link media__link_inst"></a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+  </div>
+  <!-- scripts -->
+  <script src="js/script.js"></script>  
+  
+</body>
+</html>
